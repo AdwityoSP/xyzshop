@@ -1,4 +1,4 @@
-const detailShoes = require('./detailShoes');
+const detailShoes = require('./detail-shoes.controller');
 
 const MasterShoes = require('../models').MasterShoes;
 const DetailShoes = require('../models').DetailShoes;
