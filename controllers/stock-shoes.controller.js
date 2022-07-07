@@ -13,6 +13,24 @@ module.exports = {
             });
     },
 
+    add(req, res) {
+        if (req.body.stock.length == 0) {
+            return res.status(400).send(
+                {
+                    error_code: "400",
+                    message: "Stock must be filled"
+                }
+            )
+        }
+        return StockShoes.create({
+            masterId: req.body.masterId,
+            detailId: req.body.detailId,
+            stock: req.body.stock
+        })
+            .then((stockShoes) => res.status(200).send(stockShoes))
+            .catch((error) => res.status(500).send(error))
+    },
+
     checkStock(req, res) {
         return StockShoes.findByPk(req.params.id)
             .then((stock) => {

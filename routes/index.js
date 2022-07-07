@@ -19,6 +19,7 @@ router.post('/mastershoes/create', mastershoesController.add);
 
 // StockShoes
 router.get('/stockshoes', stockshoesController.list);
+router.post('/stockshoes/create', stockshoesController.add);
 router.get('/checkstock/:id', stockshoesController.checkStock);
 router.get('/checkshoes/:id', stockshoesController.getById);
 
