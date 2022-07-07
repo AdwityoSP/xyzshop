@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "960f7c46-1103-4137-b8ef-d2a87a0e70b3",
+		"name": "xyzshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"AirMax\",\r\n    \"color\": [\"Black\"],\r\n    \"size\": [\"40\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST add detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Air Max\",\r\n    \"color\": [\"Black\"],\r\n    \"size\": [41]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/detail/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"detail",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET brand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/brand",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST add brand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Adidas\",\r\n    \"price\": 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/brand/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brand",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/inventory",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST add inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"masterId\": 2,\r\n    \"detailId\": 2,\r\n    \"stock\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/inventory/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"inventory",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET checkInventory by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Airmax\",\r\n    \"color\": [\"Black\"],\r\n    \"size\": [40]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/checkInventory/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checkInventory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET checkList by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/checkList/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"checkList",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

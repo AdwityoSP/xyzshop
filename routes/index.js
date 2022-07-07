@@ -10,17 +10,17 @@ router.get('/', function(req, res, next) {
 });
 
 // DetailShoes
-router.get('/detailshoes', detailshoesController.list);
-router.post('/detailshoes/create', detailshoesController.add);
+router.get('/detail', detailshoesController.list);
+router.post('/detail/create', detailshoesController.add);
 
 // MasterShoes
-router.get('/mastershoes', mastershoesController.list);
-router.post('/mastershoes/create', mastershoesController.add);
+router.get('/brand', mastershoesController.list);
+router.post('/brand/create', mastershoesController.add);
 
 // StockShoes
-router.get('/stockshoes', stockshoesController.list);
-router.post('/stockshoes/create', stockshoesController.add);
-router.get('/checkstock/:id', stockshoesController.checkStock);
-router.get('/checkshoes/:id', stockshoesController.getById);
+router.get('/inventory', stockshoesController.list);
+router.post('/inventory/create', stockshoesController.add);
+router.get('/checkInventory/:id', stockshoesController.checkStock);
+router.get('/checkList/:id', stockshoesController.getById);
 
 module.exports = router; 
